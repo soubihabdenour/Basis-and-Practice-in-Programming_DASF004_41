@@ -8,15 +8,15 @@ Welcome to your first week of learning C programming! This week, we will cover t
 - Work with basic data types and variables
 
 ### **Time Breakdown**
-- **Introduction & Explanation (15 min)**
-- **Writing a Simple C Program (20 min)**
-- **Working with Variables and Data Types (25 min)**
+- **Introduction & Explanation (10 min)**
+- **Writing a Simple C Program (10 min)**
+- **Working with Variables and Data Types (15 min)**
 - **Taking User Input (20 min)**
 - **Exercise & Q/A (10 min)**
 
 ---
 
-## **1. Writing Your First C Program (20 min)**
+## **1. Writing Your First C Program (10 min)**
 A C program consists of functions and statements enclosed in `{}`. Every program starts with a `main()` function. Below is a simple C program that prints "Hello, World!" to the screen.
 
 ### **Example:** Hello, World!
@@ -34,12 +34,12 @@ int main() {
 - `printf("Hello, World!\n");`: This prints "Hello, World!" to the screen.
 - `return 0;`: Ends the program successfully.
 
-### **Exercise 1 (10 min):**
+### **Exercise 1 (5 min):**
 Modify the above program to print your name instead of "Hello, World!".
 
 ---
 
-## **2. Variables and Data Types (25 min)**
+## **2. Variables and Data Types (15 min)**
 Variables are used to store data. In C, you must declare a variable before using it.
 
 ### **Common Data Types:**
