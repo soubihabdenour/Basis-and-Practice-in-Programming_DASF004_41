@@ -1,4 +1,4 @@
-# Week 1: Introduction to C Programming (1h 30min Tutorial)
+# Week 1: Introduction to C Programming
 
 ## Overview
 Welcome to your first week of learning C programming! This week, we will cover the basics of writing and running a simple C program. By the end of this tutorial, you will:
@@ -12,7 +12,7 @@ Welcome to your first week of learning C programming! This week, we will cover t
 - **Writing a Simple C Program (10 min)**
 - **Working with Variables and Data Types (15 min)**
 - **Taking User Input (20 min)**
-- **Exercise & Q/A (10 min)**
+- **Exercise & Q/A (15 min)**
 
 ---
 
@@ -92,7 +92,7 @@ Write a program that asks the user for their name and age, then prints a greetin
 
 ---
 
-## **4. Assignment (15 min): Medical Checkup Program**
+## **4. Assignment (10 min): Medical Checkup Program**
 Inspired by previous assignments, let's create a structured task:
 
 ### **Task:** Write a C program that simulates a basic medical checkup. Your program should:
