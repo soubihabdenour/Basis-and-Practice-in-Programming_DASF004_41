@@ -37,7 +37,7 @@ Check the maximum and minimum values of other data types and see what happens wh
 There are lots of functions in stirng.h that we can use when we deal with a string.
 
 ### **Functions in <string.h>**
-<img src="/exercise3.JPG" width="50" height="50"/>
+<img src="./strings.JPG"/>
 
 ### **Example:** Using Variables
 ```c
@@ -87,7 +87,8 @@ int main(){
 Write a program that ask score of Math, English, Korean and print the average score to the second decimal place.
 
 ### **Example Output:**
-<img src="/exercise3.png" width="50" height="50"/>
+Your average score is 54.25
+
 ---
 
 ## **4. Assignment:
