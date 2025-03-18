@@ -3,45 +3,38 @@
 ## Overview
 Welcome to your second week of learning C programming! 
 This week, we will cover the basics of writing and running a simple C program. By the end of this tutorial, you will:
-- Overflow
+- Overflow, Underflow
 - Handling String with <string.h> 
 - Type Casting/Conversion
-- 
-
-### **Time Breakdown**
-- **Introduction & Explanation (10 min)**
-- **Writing a Simple C Program (10 min)**
-- **Working with Variables and Data Types (15 min)**
-- **Taking User Input (20 min)**
-- **Exercise & Q/A (15 min)**
 
 ---
 
-## **1. Writing Your First C Program (10 min)**
-A C program consists of functions and statements enclosed in `{}`. Every program starts with a `main()` function. Below is a simple C program that prints "Hello, World!" to the screen.
+## ** 1. Overflow **
+You should always be careful of the range of values
 
-### **Example:** Hello, World!
+### **Example:** Overflow!
 ```c
-#include <stdio.h>
+#include<stdio.h>
+#define MAX 214783647
+#define MIN -2147483648
+int main(){
 
-int main() {
-    printf("Hello, World!\n");
-    return 0;
+    printf("max value: %d\n",MAX);
+    printf("min value: %d\n",MIN);
+
+    printf("max +1 value: %d\n",MAX+1);
+    printf("min -1 value: %d\n",MIN-1);
+
 }
 ```
-### **Explanation:**
-- `#include <stdio.h>`: This is a preprocessor directive that includes the standard input-output library.
-- `int main()`: This is the main function where program execution starts.
-- `printf("Hello, World!\n");`: This prints "Hello, World!" to the screen.
-- `return 0;`: Ends the program successfully.
 
 ### **Exercise 1 (5 min):**
-Modify the above program to print your name instead of "Hello, World!".
+Check the maximum and minimum values of other data types and see what happens when you go beyond the range of values
 
 ---
 
 ## **2. String (15 min)**
-Variables are used to store data. In C, you must declare a variable before using it.
+There are lots of functions in stirng.h that we can use when we deal with a string.
 
 ### **Functions in <string.h>**
 <img src="/exercise3.JPG" width="50" height="50"/>
@@ -54,7 +47,7 @@ int main() {
     char hello[20]="hello";
     char world[20]="world";
     printf("%s%s\n",hello,world);
-    strcat(hello,world)
+    strcat(hello,world);
     printf("%s and length of hello string is: %d\n",hello,strlen(hello));
     return 0;
 }
@@ -62,6 +55,8 @@ int main() {
 
 ### **Exercise 2 (10 min):**
 Create a program that introduce yourself by getting input of your last name, first name and age.
+*Please get input of your last, middle, first name seperately and print if by putting your name in one string variable.
+(Output Ex. Hello, my name is JinseSeo and I am 24 years old. Nice to meet you!)
 
 ---
 
@@ -70,53 +65,57 @@ You can converse data type
 
 ### **Example:** User Input
 ```c
-#include <stdio.h>
+#include<stdio.h>
 
-int main() {
-    int age;
-    printf("Enter your age: ");
-    scanf("%d", &age);
-    printf("You are %d years old.\n", age);
+int main(){
+
+    int a=100;
+    int b=3;
+    float c=3.33;
+    printf("%d and %f \n", a/b, (float)a/b);
+
+    printf("%d and %f\n", (int)c, c);
+    
+    c=a/b;
+    a=3.33;
+    printf("%f and %d\n", c, a);
     return 0;
 }
 ```
 
 ### **Exercise 3 (10 min):**
-Write a program that ask score of Math, English, Korean and print average of score.
+Write a program that ask score of Math, English, Korean and print the average score to the second decimal place.
 
 ### **Example Output:**
 <img src="/exercise3.png" width="50" height="50"/>
 ---
 
-## **4. Assignment (10 min): Medical Checkup Program**
+## **4. Assignment:
 Inspired by previous assignments, let's create a structured task:
 
 ### **Task:** Write a C program that simulates a basic medical checkup. Your program should:
-1. Ask the user for their age, gender (M/F), height (in meters), weight (in kg), blood type (A, B, or O), and body temperature.
-2. Print all this information in a single `printf()` statement, using proper formatting.
+1. Ask the user for their last name, first name, age, gender (M/F), height (in cm) and weight (in kg).
+2. Askt the user for their scores of Math, English, Korean and Art.
+3. Print all this information using proper formatting.
+
+BMI = Kg/m^2
 
 ### **Example Output:**
 ```
-You are 24 years old and your gender is "M".
-Your height and weight are 1.74 m, 74.00 kg.
-Your blood type is 'A'.
-Your body temperature is 36.50 degrees Celsius.
+You are JinseSeo, 24 years old and your gender is "M"
+Your BMI is 21.749418
+Your average score is 54.25
 ```
-
-### **Hints:**
-- Use `printf()` for output formatting.
-- Use `\n` for line breaks and `\t` for spacing.
-- Store values in variables and use `%d`, `%f`, and `%c` format specifiers accordingly.
 
 ---
 
 ## **Summary & Wrap-Up (10 min)**
 This week, we covered:
 - Writing a simple C program
-- Using `printf()` for output
-- Declaring variables and using data types
-- Taking user input with `scanf()`
+- Overflow, Underflow
+- Utilizing String functions 
+- Type casting/conversion
 
-### **Next Week:** Basic C Programming - Arithmetic Operations and Control Statements
+### **Next Week:** Basic C Programming - loops
 
 Happy coding! 🚀
