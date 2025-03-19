@@ -9,7 +9,7 @@ This week, we will cover the basics of writing and running a simple C program. B
 
 ---
 
-## ** 1. Overflow **
+## ** 1. Overflow (10 min)**
 You should always be careful of the range of values
 
 ### **Example:** Overflow!
@@ -60,7 +60,7 @@ Create a program that introduce yourself by getting input of your last name, fir
 
 ---
 
-## **3. Typecasintg **
+## **3. Typecasintg  (20 min)**
 You can converse data type 
 
 ### **Example:** User Input
@@ -91,7 +91,7 @@ Your average score is 54.25
 
 ---
 
-## **4. Assignment:
+## **4. Assignment (10 min) a personal information output program:
 Inspired by previous assignments, let's create a structured task:
 
 ### **Task:** Write a C program that a personal information output program. Your program should:
