@@ -94,7 +94,7 @@ Your average score is 54.25
 ## **4. Assignment:
 Inspired by previous assignments, let's create a structured task:
 
-### **Task:** Write a C program that simulates a basic information. Your program should:
+### **Task:** Write a C program that a personal information output program. Your program should:
 1. Ask the user for their last name, first name, age, gender (M/F), height (in cm) and weight (in kg).
 2. Askt the user for their scores of Math, English, Korean and Art.
 3. Print all this information using proper formatting.
