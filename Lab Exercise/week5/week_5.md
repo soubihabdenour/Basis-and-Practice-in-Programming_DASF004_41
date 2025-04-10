@@ -191,7 +191,7 @@ Matrix: 8 7 6 5 4 3 2 1 0
 ```
 
 ### **Exercise 3:** Write a program that calculate the Factorial using recursive function and for/while loop.**
-You need to make 2 functions to calculate the fatorial of input number, one using recursive function and the other one uses for or while loop.
+You need to make 2 functions to calculate the fatorial of input number. One uses recursive function and the other one uses for or while loop.
 
 ### **Example Output **
 
@@ -205,11 +205,11 @@ Factorial of 5 using for loop is 120
 
 ## **Bonus Challenge: Make a program that check if the string is palindrome or not (회문)**
 
-Input is entered in lowercase only. 
+Input could be entered both in lowercase and uppercase.
 
 ### **Example Output **
 ```
-Please enter a string: kayak
+Please enter a string: Kayak
 It is a palindrome!
 
 Please enter a string: superman
@@ -219,6 +219,15 @@ Please enter a string: exex
 It is not a palindrome!
 
 ```
+
+## **Bonus Challenge: Tower of Hanoi**
+If you are interested in the recursive function, solve this problem!
+
+Korean ver.
+https://www.acmicpc.net/problem/11729
+
+Englih ver.
+https://leetcode.com/discuss/post/5272714/tower-of-hanoi-by-satvikmpatil-owd6/
 
 ---
 
