@@ -182,7 +182,7 @@ Hint*
 1. Size of ary varies everytime. Use a sizeof() function to get a length of array
 2. Array is handled in the way of Call By Reference. You don't need to care about pointer!
 
-### **Example Output (for `n = 5`):**
+### **Example Output (for `n = 9`):**
 ```
 ===== After set_matrix function =====
 Matrix: 0 1 2 3 4 5 6 7 8 
