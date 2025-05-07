@@ -71,10 +71,14 @@ int main() {
 }
 
 ```
-![Pointer_to_an_array](./
-```
+![pointer_to_an_array](./pointer_to_an_array.png)  
 
-```
+
+![PointerArray](./PointerArray.png)  
+
+
+
+
 ### **Example Output:**
 ```
 (*p)[0]: 10
