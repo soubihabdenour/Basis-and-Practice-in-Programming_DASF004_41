@@ -1,4 +1,4 @@
-# Week 8: pointer
+# Week 9: pointer
 
 ## **Overview**
 Welcome to Week 8 of C programming! This week, we will explore pointer. By the end of this tutorial, you will:
