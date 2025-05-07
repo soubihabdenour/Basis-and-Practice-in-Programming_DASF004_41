@@ -71,10 +71,10 @@ int main() {
 }
 
 ```
-![pointer_to_an_array](./pointer_to_an_array.png)  
+![pointer_to_an_array](./PointerToAnArray.png)  
 
 
-![PointerArray](./PointerArray.png)  
+![PointerArray](./ptArray.png)  
 
 
 
