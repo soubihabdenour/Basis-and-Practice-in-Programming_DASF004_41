@@ -15,10 +15,10 @@ Welcome to Week 8 of C programming! This week, we will explore pointer. By the e
 ---
 
 ## **1. Pointer **
-Pointer is a variable that stores the "memory address".
-*: Dereference operator
-&: Address-of operator 
-%p: Format specifier for printing adresses
+Pointer is a variable that stores the "memory address".  
+*: Dereference operator  
+&: Address-of operator  
+%p: Format specifier for printing adresses  
 ### **Example:** How to define and use functions
 ```c
 int a = 10;
@@ -41,8 +41,10 @@ value of *p: 10
 ---
 
 ## **2. Pointer to an array vs Pointer array **
-Pointer to an array: It is a singular pointer that points to a certain type of "array".
-Pointer array: An array that holds pointers as its elements.
+Pointer to an array (배열 포인터) : It is a singular pointer that points to a certain type of "array".  
+-It is usually used when the parameter is 2-dimensional array.  
+
+Pointer array (포인터 배열) : An array that holds pointers as its elements.  
 
 ### **Example:** Change numbers in the functions
 ```c
@@ -68,6 +70,9 @@ int main() {
     return 0;
 }
 
+```
+![Pointer_to_an_array](./
+```
 
 ```
 ### **Example Output:**
