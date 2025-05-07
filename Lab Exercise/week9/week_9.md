@@ -1,15 +1,16 @@
 # Week 9: pointer
 
 ## **Overview**
-Welcome to Week 8 of C programming! This week, we will explore pointer. By the end of this tutorial, you will:
+Welcome to Week 9 of C programming! This week, we will explore pointer. By the end of this tutorial, you will:
 - Understand the basic concept of pointer
 - Understand the difference between pointer to an array and pointer array (배열 포인터 vs 포인터 배열)
 - Understand the double pointer
-
+- Understand call-by-reference
 ### **Time Breakdown**
-- **Introduction to a function**
-- **Call by Value, Call by reference**
-- **Recursion Fuction**
+- **Introduction to a pointer**
+- **Pointer to an array, and Pointer array**
+- **double pointer**
+- **call by reference**
 - **Exercises & Q/A**
 
 ---
@@ -19,7 +20,7 @@ Pointer is a variable that stores the "memory address".
 *: Dereference operator  
 &: Address-of operator  
 %p: Format specifier for printing adresses  
-### **Example:** How to define and use functions
+### **Example:** How to define and use a Pointer
 ```c
 int a = 10;
 int *p = &a;
@@ -46,24 +47,23 @@ Pointer to an array (배열 포인터) : It is a singular pointer that points to
 
 Pointer array (포인터 배열) : An array that holds pointers as its elements.  
 
-### **Example:** Change numbers in the functions
+### **Example:** Pointer to an array vs Pointer array
 ```c
 #include <stdio.h>
 
 int main() {
   // Pointer to an array
-    int arr[3] = { 10, 20, 30 };
-    int (*p)[3] = &arr;  // 3개의 int로 이루어진 배열의 주소를 저장
+    char arr[3][7] = { "ABC", "DEF", "Point"};
+    char (*data1)[7] = arr;  // 7개의 char로 이루어진 배열의 주소를 저장
 
     for (int i = 0; i < 3; i++) {
-        printf("(*p)[%d]: %d\n", i, (*p)[i]);
+        printf("data1[%d]: %s\n", i, *(data1+i));
     }
-
+    printf("===========================\n");
    // Pointer array
-    int a = 10, b = 20, c = 30;
-    int *arr2[3] = { &a, &b, &c }; 
+    char *data2[]={"ABC123456", "DEF", "Point"};
     for (int i = 0; i < 3; i++) {
-        printf("value of *arr[%d]: %d\n", i, *arr2[i]);
+        printf("data2[%d]: %s\n", i, data2[i]);
     }
 
 
@@ -71,22 +71,25 @@ int main() {
 }
 
 ```
-![pointer_to_an_array](./PointerToAnArray.png)  
+## Pointer to an array  
+![pointer_to_an_array](./PointerToAnArray.png)    
 
+## Pointer Array
 
-![PointerArray](./ptArray.png)  
+![PointerArray](./image.png)  
 
 
 
 
 ### **Example Output:**
 ```
-(*p)[0]: 10
-(*p)[1]: 20
-(*p)[2]: 30
-value of *arr[0]: 10
-value of *arr[1]: 20
-value of *arr[2]: 30
+data1[0]: ABC
+data1[1]: DEF
+data1[2]: Point
+===========================
+data2[0]: ABC123456
+data2[1]: DEF
+data2[2]: Point
 ```
 
 ---
@@ -114,93 +117,80 @@ int main() {
 ```
 value of x: 999
 ```
-
-
 ---
 
-### **Exercise 1:** Make a swap function.
-1. Input two numbers
-2. change the value of each variable
-3. print the result 
-### **Example Output **
-```
-Please enter two numbers: 1 2
-Before swap num: num1 = 1, num2 = 2
-After swap num: num1 = 2, num2 = 1
-```
+## **4. Call by reference **
+Pointers allow modifying variables outside the function.  
 
-### **Exercise 2: Make a program hadling 1-dimension matrix (array) ** 
+### **Example:** How to define and use a Pointer
+```c
+#include <stdio.h>
 
-You need to write these functinos:
+void swap(int *x, int *y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
 
-- void set_matrix(int ary[], int len);  
--set the matrix in ascending order from 0 to len
-
-- void reverse_matrix(int ary[], int len);  
--Reverse the order of the array  
-
-- void print_matrix(int ary[], int len);  
--Print out all numbers in the array  
-
-Hint* 
-1. Size of ary varies everytime. Use a sizeof() function to get a length of array
-2. Array is handled in the way of Call By Reference. You don't need to care about pointer!
-
-### **Example Output (for `n = 9`):**
-```
-===== After set_matrix function =====
-Matrix: 0 1 2 3 4 5 6 7 8 
-===== After reverse_matrix function =====
-Matrix: 8 7 6 5 4 3 2 1 0 
-```
-
-### **Exercise 3:** Write a program that calculate the Factorial using recursive function and for/while loop.**
-You need to make 2 functions to calculate the fatorial of input number. One uses recursive function and the other one uses for or while loop.
-
-### **Example Output **
+int main(void) {
+    int a = 5, b = 10;
+    swap(&a, &b);
+    printf("After swapping: a = %d, b = %d\n", a, b);
+    return 0;
+}
 
 ```
-Please enter a number: 5
-Factorial of 5 using recursive function is 120
-Factorial of 5 using for loop is 120
+### **Example Output:**
+```
+After swapping: a = 10, b = 5
 ```
 
 ---
 
-## **Bonus Challenge: Make a program that check if the string is palindrome or not (회문)**
+### **Exercise 1: change multiple values in a function using pointers. **
+1. Initialize 4 int variables.
+2. Write a function that adds 1 to each variable.
+3. print the result
 
-Input could be entered both in lowercase and uppercase.
+   
+### **Example Output **
+```
+=====before change=====
+a = 1, b = 2, c = 3, d = 4
+=====after change=====
+a = 2, b = 3, c = 4, d = 5
+```
+
+### **Exercise 2: Find Maximum Value Using Pointers ** 
+Write a program to find the maximum value in an array using pointers.  
+You can initialize the array in the way you want:  
+Eg.) int array[6] ={3, 2, 4, 22, 15, 6, 8};
+
 
 ### **Example Output **
 ```
-Please enter a string: Kayak
-It is a palindrome!
-
-Please enter a string: superman
-It is not a palindrome
-
-Please enter a string: exex
-It is not a palindrome!
-
+Maximum value = 22
 ```
 
-## **Bonus Challenge: Tower of Hanoi**
-If you are interested in the recursive function, solve this problem!
+### **Exercise 3: Find an Alphabet in a word **
+1. Please get an alphabet from a user.
+2. Please get a word from a user.
+3. Check if the word includes the alphabet 'using pointer'.
+   (Please find it using pointer arithmetic, not array index access.) 
+5. Print if the alphabet is found.
 
-Korean ver.
-https://www.acmicpc.net/problem/11729
-
-Englih ver.
-https://leetcode.com/discuss/post/5272714/tower-of-hanoi-by-satvikmpatil-owd6/
-
+   
+### **Example Output **
+```
+Please input the alphabet you want: i
+Please input the word you want: apple
+cannot find i!
+```
+```
+Please input the alphabet you want: a
+Please input the word you want: grammer
+found a!
+```
 ---
 
-## **Summary & Wrap-Up**
-This week, we covered:
-- Basic rules of functinos
-- Defference between call by value and call by reference
-- Recursive Function
 
-### **Next Week:** 
-
-Happy coding! 🚀
