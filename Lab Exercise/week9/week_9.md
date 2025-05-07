@@ -177,7 +177,7 @@ Maximum value = 22
 2. Please get a word from a user.
 3. Check if the word includes the alphabet 'using pointer'.
    (Please find it using pointer arithmetic, not array index access.) 
-5. Print if the alphabet is found.
+4. Print if the alphabet is found.
 
    
 ### **Example Output **
